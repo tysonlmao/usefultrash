@@ -5,50 +5,19 @@ from pypresence import Presence
 import time
 import colorama
 from colorama import Fore, Back, Style
+
 colorama.init(autoreset=True)
 
-Layer = [ 
-    "./Backgrounds/Pink.png",
-    "./Backgrounds/Purple.png",
-    "./Backgrounds/Teal.png",
-    "./Backgrounds/Green.png",
-    "./Backgrounds/Red.png",
-    "./Backgrounds/Blue.png",
-    "./Backgrounds/Orange.png",
-    "./Backgrounds/Gray.png"  
+layer1 = [
+
 ]
 
-Cones = [ 
-    "./Cones/Regular.png",
-    "./Cones/Waffle.png"
+layer2 = [
+
 ]
 
-Creams = [ 
-    "./Cream/Avocado.png",
-    "./Cream/Beer.png",
-    "./Cream/Bubblegum.png",
-    "./Cream/Butterscotch.png",
-    "./Cream/CherryRipe.png",
-    "./Cream/Caramel.png",
-    "./Cream/Cement.png",
-    "./Cream/CherryRipe.png",
-    "./Cream/ChocMint.png",
-    "./Cream/Chocolate.png",
-    "./Cream/CookieDough.png",
-    "./Cream/CookiesAndCream.png",
-    "./Cream/FairyFloss.png",
-    "./Cream/Kirby.png",
-    "./Cream/LemonSorbet.png",
-    "./Cream/Mango.png",
-    "./Cream/Neapolitan.png",
-    "./Cream/OldEnglishToffee.png",
-    "./Cream/Pineapple.png",
-    "./Cream/PineappleNumberTwo.png",
-    "./Cream/Rainbow.png",
-    "./Cream/Spaghetti.png",
-    "./Cream/Tomato.png",
-    "./Cream/WhiteChocolate.png",
-    "./Cream/Vanilla.png"
+layer3 = [
+
 ]
 
 a=[]
@@ -67,11 +36,11 @@ while True:
         os.system("read") # will only work on shell
         # put the amount of variations in place of 108 (aka confusing asf for loop that is overcomplicated.)
         break
-    background = random.choices(Backgrounds, weights=None)[0] #8
-    cone = random.choices(Cones, weights=None)[0] #2 
-    cream = random.choices(Creams, weights=None)[0] #25
+    background = random.choices(layer1, weights=None)[0] #8
+    cone = random.choices(layer2, weights=None)[0] #2
+    cream = random.choices(layer3, weights=None)[0] #25
 
-    if (background,cream,cone) in a: 
+    if (background,cream,cone) in a:
         continue
     else:
         a.append((background,cone,cream))
