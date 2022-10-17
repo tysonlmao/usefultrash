@@ -9,7 +9,7 @@ for x in range(1):
     from time import sleep
     sleep(1)
     ans = lower_case + upper_case + num + special
-    length = 30
+    length = 64
     password = "".join(random.sample(ans, length))
     print(password)
 
